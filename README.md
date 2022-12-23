@@ -30,7 +30,7 @@ In addition to the handful of items and recommendations made in the above sectio
 
 The below is a snippet of the code I used to compare data values to the filter values and pare down the data accordingly:
 
-[Image 3: For Loop](/Resources/jscode.png)
+[Image 3: For Loop](/Resources/jscode.png) 
 
 I initially attempted to extract the key values from my filters object and then compare to the corresponding column in the data object.  For example, if the user entered "us" into the Country filter, my javascript filters object would be:
 
