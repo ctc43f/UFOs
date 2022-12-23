@@ -30,7 +30,34 @@ In addition to the handful of items and recommendations made in the above sectio
 
 The below is a snippet of the code I used to compare data values to the filter values and pare down the data accordingly:
 
-[Image 3: For Loop](/Resources/jscode.png) 
+```
+    // 9. Loop through all of the filters and keep any data that
+    // matches the filter values
+    if (filters.datetime) {
+      console.log("datetime filter");
+      filteredData = filteredData.filter(row => row.datetime === filters.datetime);
+    } 
+    
+    if (filters.city) {
+      console.log("city filter");
+      filteredData = filteredData.filter(row => row.city === filters.city);
+    } 
+    
+    if (filters.state) {
+      console.log("state filter");
+      filteredData = filteredData.filter(row => row.state === filters.state);
+    } 
+    
+    if (filters.country) {
+      console.log("country filter");
+      filteredData = filteredData.filter(row => row.country === filters.country);
+    } 
+    
+    if (filters.shape) {
+      console.log("shape filter");
+      filteredData = filteredData.filter(row => row.shape === filters.shape);
+    }
+```
 
 I initially attempted to extract the key values from my filters object and then compare to the corresponding column in the data object.  For example, if the user entered "us" into the Country filter, my javascript filters object would be:
 
